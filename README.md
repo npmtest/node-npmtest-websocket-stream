@@ -1,7 +1,10 @@
-# test coverage for  [websocket-stream (v4.0.0)](https://github.com/maxogden/websocket-stream#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-websocket-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-websocket-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-websocket-stream.svg)](https://travis-ci.org/npmtest/node-npmtest-websocket-stream)
+# npmtest-websocket-stream
+
+#### test coverage for  [websocket-stream (v4.0.0)](https://github.com/maxogden/websocket-stream#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-websocket-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-websocket-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-websocket-stream.svg)](https://travis-ci.org/npmtest/node-npmtest-websocket-stream)
+
 #### Use websockets with the node streams API. Works in browser and node
 
-[![NPM](https://nodei.co/npm/websocket-stream.png?downloads=true)](https://www.npmjs.com/package/websocket-stream)
+[![NPM](https://nodei.co/npm/websocket-stream.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/websocket-stream)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-websocket-stream/tree/alpha)|
 |--:|:--|
@@ -9,11 +12,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-websocket-stream/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-websocket-stream/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-websocket-stream/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-websocket-stream/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-websocket-stream%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-websocket-stream/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-websocket-stream/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-websocket-stream%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-websocket-stream/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.html](https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-websocket-stream/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-websocket-stream/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-websocket-stream/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-websocket-stream/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-websocket-stream/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-websocket-stream/build/screenCapture.npmPackageListing.svg)
 
@@ -68,29 +77,23 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "deanlandolt",
-            "email": "dean@deanlandolt.com"
+            "name": "deanlandolt"
         },
         {
-            "name": "jnordberg",
-            "email": "code@johan-nordberg.com"
+            "name": "jnordberg"
         },
         {
-            "name": "mafintosh",
-            "email": "mathiasbuus@gmail.com"
+            "name": "mafintosh"
         },
         {
-            "name": "matteo.collina",
-            "email": "hello@matteocollina.com"
+            "name": "matteo.collina"
         },
         {
-            "name": "maxogden",
-            "email": "max@maxogden.com"
+            "name": "maxogden"
         }
     ],
     "name": "websocket-stream",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+ssh://git@github.com/maxogden/websocket-stream.git"
