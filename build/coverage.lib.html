@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-websocket-stream/websocket-stream/stream.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-websocket-stream/node_modules/websocket-stream/stream.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-websocket-stream">npmtest-websocket-stream (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-websocket-stream/websocket-stream/stream.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-websocket-stream/node_modules/websocket-stream/stream.js</span></h1>
     <h2>
         
         Statements: <span class="metric">16% <small>(16 / 100)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-websocket-stream/websocket-stream/</a> » stream.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-websocket-stream/node_modules/websocket-stream/</a> &#187; stream.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -587,186 +589,185 @@ var Buffer = require('safe-buffer').Buffer
 &nbsp;
 module.exports = WebSocketStream
 &nbsp;
-<span class="fstat-no" title="function not covered">function buildProxy (options, socketWrite, socketEnd) {</span>
-<span class="cstat-no" title="statement not covered">  var proxy = new Transform({</span>
+<span class="fstat-no" title="function not covered" >function buildProxy (options, socketWrite, socketEnd) {</span>
+<span class="cstat-no" title="statement not covered" >  var proxy = new Transform({</span>
     objectMode: options.objectMode
   })
 &nbsp;
-<span class="cstat-no" title="statement not covered">  proxy._destroyed = false</span>
-<span class="cstat-no" title="statement not covered">  proxy._write = socketWrite</span>
-<span class="cstat-no" title="statement not covered">  proxy._flush = socketEnd</span>
+<span class="cstat-no" title="statement not covered" >  proxy._destroyed = false</span>
+<span class="cstat-no" title="statement not covered" >  proxy._write = socketWrite</span>
+<span class="cstat-no" title="statement not covered" >  proxy._flush = socketEnd</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  proxy.destroy = <span class="fstat-no" title="function not covered">function(err) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (this._destroyed) <span class="cstat-no" title="statement not covered">return</span></span>
-<span class="cstat-no" title="statement not covered">      this._destroyed = true</span>
+<span class="cstat-no" title="statement not covered" >  proxy.destroy = <span class="fstat-no" title="function not covered" >function(err) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (this._destroyed) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered" >      this._destroyed = true</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var self = this</span>
-<span class="cstat-no" title="statement not covered">    process.nextTick(<span class="fstat-no" title="function not covered">function() {</span></span>
-<span class="cstat-no" title="statement not covered">      if (err)</span>
-<span class="cstat-no" title="statement not covered">        self.emit('error', err)</span>
-<span class="cstat-no" title="statement not covered">      self.emit('close')</span>
+<span class="cstat-no" title="statement not covered" >    var self = this</span>
+<span class="cstat-no" title="statement not covered" >    process.nextTick(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err)</span>
+<span class="cstat-no" title="statement not covered" >        self.emit('error', err)</span>
+<span class="cstat-no" title="statement not covered" >      self.emit('close')</span>
     })
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return proxy</span>
+<span class="cstat-no" title="statement not covered" >  return proxy</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function WebSocketStream(target, protocols, options) {</span>
-<span class="cstat-no" title="statement not covered">  var stream, socket</span>
+<span class="fstat-no" title="function not covered" >function WebSocketStream(target, protocols, options) {</span>
+<span class="cstat-no" title="statement not covered" >  var stream, socket</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var isBrowser = process.title === 'browser'</span>
-<span class="cstat-no" title="statement not covered">  var isNative = !!global.WebSocket</span>
-<span class="cstat-no" title="statement not covered">  var socketWrite = isBrowser ? socketWriteBrowser : socketWriteNode</span>
+<span class="cstat-no" title="statement not covered" >  var isBrowser = process.title === 'browser'</span>
+<span class="cstat-no" title="statement not covered" >  var isNative = !!global.WebSocket</span>
+<span class="cstat-no" title="statement not covered" >  var socketWrite = isBrowser ? socketWriteBrowser : socketWriteNode</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (protocols &amp;&amp; !Array.isArray(protocols) &amp;&amp; 'object' === typeof protocols) {</span>
+<span class="cstat-no" title="statement not covered" >  if (protocols &amp;&amp; !Array.isArray(protocols) &amp;&amp; 'object' === typeof protocols) {</span>
     // accept the "options" Object as the 2nd argument
-<span class="cstat-no" title="statement not covered">    options = protocols</span>
-<span class="cstat-no" title="statement not covered">    protocols = null</span>
+<span class="cstat-no" title="statement not covered" >    options = protocols</span>
+<span class="cstat-no" title="statement not covered" >    protocols = null</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (typeof options.protocol === 'string' || Array.isArray(options.protocol)) {</span>
-<span class="cstat-no" title="statement not covered">      protocols = options.protocol;</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof options.protocol === 'string' || Array.isArray(options.protocol)) {</span>
+<span class="cstat-no" title="statement not covered" >      protocols = options.protocol;</span>
     }
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!options) <span class="cstat-no" title="statement not covered">options = {}</span></span>
+<span class="cstat-no" title="statement not covered" >  if (!options) <span class="cstat-no" title="statement not covered" >options = {}</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (options.objectMode === undefined) {</span>
-<span class="cstat-no" title="statement not covered">    options.objectMode = !(options.binary === true || options.binary === undefined)</span>
+<span class="cstat-no" title="statement not covered" >  if (options.objectMode === undefined) {</span>
+<span class="cstat-no" title="statement not covered" >    options.objectMode = !(options.binary === true || options.binary === undefined)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var proxy = buildProxy(options, socketWrite, socketEnd)</span>
+<span class="cstat-no" title="statement not covered" >  var proxy = buildProxy(options, socketWrite, socketEnd)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!options.objectMode) {</span>
-<span class="cstat-no" title="statement not covered">    proxy._writev = writev</span>
+<span class="cstat-no" title="statement not covered" >  if (!options.objectMode) {</span>
+<span class="cstat-no" title="statement not covered" >    proxy._writev = writev</span>
   }
 &nbsp;
   // browser only: sets the maximum socket buffer size before throttling
-<span class="cstat-no" title="statement not covered">  var bufferSize = options.browserBufferSize || 1024 * 512</span>
+<span class="cstat-no" title="statement not covered" >  var bufferSize = options.browserBufferSize || 1024 * 512</span>
 &nbsp;
   // browser only: how long to wait when throttling
-<span class="cstat-no" title="statement not covered">  var bufferTimeout = options.browserBufferTimeout || 1000</span>
+<span class="cstat-no" title="statement not covered" >  var bufferTimeout = options.browserBufferTimeout || 1000</span>
 &nbsp;
   // use existing WebSocket object that was passed in
-<span class="cstat-no" title="statement not covered">  if (typeof target === 'object') {</span>
-<span class="cstat-no" title="statement not covered">    socket = target</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof target === 'object') {</span>
+<span class="cstat-no" title="statement not covered" >    socket = target</span>
   // otherwise make a new one
   } else {
     // special constructor treatment for native websockets in browsers, see
     // https://github.com/maxogden/websocket-stream/issues/82
-<span class="cstat-no" title="statement not covered">    if (isNative &amp;&amp; isBrowser) {</span>
-<span class="cstat-no" title="statement not covered">      socket = new WS(target, protocols)</span>
+<span class="cstat-no" title="statement not covered" >    if (isNative &amp;&amp; isBrowser) {</span>
+<span class="cstat-no" title="statement not covered" >      socket = new WS(target, protocols)</span>
     } else {
-<span class="cstat-no" title="statement not covered">      socket = new WS(target, protocols, options)</span>
+<span class="cstat-no" title="statement not covered" >      socket = new WS(target, protocols, options)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    socket.binaryType = 'arraybuffer'</span>
+<span class="cstat-no" title="statement not covered" >    socket.binaryType = 'arraybuffer'</span>
   }
 &nbsp;
   // was already open when passed in
-<span class="cstat-no" title="statement not covered">  if (socket.readyState === WS.OPEN) {</span>
-<span class="cstat-no" title="statement not covered">    stream = proxy</span>
+<span class="cstat-no" title="statement not covered" >  if (socket.readyState === WS.OPEN) {</span>
+<span class="cstat-no" title="statement not covered" >    stream = proxy</span>
   } else {
-<span class="cstat-no" title="statement not covered">    stream = duplexify.obj()</span>
-<span class="cstat-no" title="statement not covered">    socket.onopen = onopen</span>
+<span class="cstat-no" title="statement not covered" >    stream = duplexify.obj()</span>
+<span class="cstat-no" title="statement not covered" >    socket.onopen = onopen</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  stream.socket = socket</span>
+<span class="cstat-no" title="statement not covered" >  stream.socket = socket</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  socket.onclose = onclose</span>
-<span class="cstat-no" title="statement not covered">  socket.onerror = onerror</span>
-<span class="cstat-no" title="statement not covered">  socket.onmessage = onmessage</span>
+<span class="cstat-no" title="statement not covered" >  socket.onclose = onclose</span>
+<span class="cstat-no" title="statement not covered" >  socket.onerror = onerror</span>
+<span class="cstat-no" title="statement not covered" >  socket.onmessage = onmessage</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  proxy.on('close', destroy)</span>
+<span class="cstat-no" title="statement not covered" >  proxy.on('close', destroy)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var coerceToBuffer = !options.objectMode</span>
+<span class="cstat-no" title="statement not covered" >  var coerceToBuffer = !options.objectMode</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function socketWriteNode(chunk, enc, next) {</span>
+<span class="fstat-no" title="function not covered" >  function socketWriteNode(chunk, enc, next) {</span>
     // avoid errors, this never happens unless
     // destroy() is called
-<span class="cstat-no" title="statement not covered">    if (socket.readyState !== WS.OPEN) {</span>
-<span class="cstat-no" title="statement not covered">      next()</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="cstat-no" title="statement not covered" >    if (socket.readyState !== WS.OPEN) {</span>
+<span class="cstat-no" title="statement not covered" >      next()</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (coerceToBuffer &amp;&amp; typeof chunk === 'string') {</span>
-<span class="cstat-no" title="statement not covered">      chunk = new Buffer(chunk, 'utf8')</span>
+<span class="cstat-no" title="statement not covered" >    if (coerceToBuffer &amp;&amp; typeof chunk === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >      chunk = new Buffer(chunk, 'utf8')</span>
     }
-<span class="cstat-no" title="statement not covered">    socket.send(chunk, next)</span>
+<span class="cstat-no" title="statement not covered" >    socket.send(chunk, next)</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function socketWriteBrowser(chunk, enc, next) {</span>
-<span class="cstat-no" title="statement not covered">    if (socket.bufferedAmount &gt; bufferSize) {</span>
-<span class="cstat-no" title="statement not covered">      setTimeout(socketWriteBrowser, bufferTimeout, chunk, enc, next)</span>
-<span class="cstat-no" title="statement not covered">      return</span>
+<span class="fstat-no" title="function not covered" >  function socketWriteBrowser(chunk, enc, next) {</span>
+<span class="cstat-no" title="statement not covered" >    if (socket.bufferedAmount &gt; bufferSize) {</span>
+<span class="cstat-no" title="statement not covered" >      setTimeout(socketWriteBrowser, bufferTimeout, chunk, enc, next)</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (coerceToBuffer &amp;&amp; typeof chunk === 'string') {</span>
-<span class="cstat-no" title="statement not covered">      chunk = new Buffer(chunk, 'utf8')</span>
+<span class="cstat-no" title="statement not covered" >    if (coerceToBuffer &amp;&amp; typeof chunk === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >      chunk = new Buffer(chunk, 'utf8')</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      socket.send(chunk)</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      socket.send(chunk)</span>
     } catch(err) {
-<span class="cstat-no" title="statement not covered">      return next(err)</span>
+<span class="cstat-no" title="statement not covered" >      return next(err)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    next()</span>
+<span class="cstat-no" title="statement not covered" >    next()</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function socketEnd(done) {</span>
-<span class="cstat-no" title="statement not covered">    socket.close()</span>
-<span class="cstat-no" title="statement not covered">    done()</span>
+<span class="fstat-no" title="function not covered" >  function socketEnd(done) {</span>
+<span class="cstat-no" title="statement not covered" >    socket.close()</span>
+<span class="cstat-no" title="statement not covered" >    done()</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function onopen() {</span>
-<span class="cstat-no" title="statement not covered">    stream.setReadable(proxy)</span>
-<span class="cstat-no" title="statement not covered">    stream.setWritable(proxy)</span>
-<span class="cstat-no" title="statement not covered">    stream.emit('connect')</span>
+<span class="fstat-no" title="function not covered" >  function onopen() {</span>
+<span class="cstat-no" title="statement not covered" >    stream.setReadable(proxy)</span>
+<span class="cstat-no" title="statement not covered" >    stream.setWritable(proxy)</span>
+<span class="cstat-no" title="statement not covered" >    stream.emit('connect')</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function onclose() {</span>
-<span class="cstat-no" title="statement not covered">    stream.end()</span>
-<span class="cstat-no" title="statement not covered">    stream.destroy()</span>
+<span class="fstat-no" title="function not covered" >  function onclose() {</span>
+<span class="cstat-no" title="statement not covered" >    stream.end()</span>
+<span class="cstat-no" title="statement not covered" >    stream.destroy()</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function onerror(err) {</span>
-<span class="cstat-no" title="statement not covered">    stream.destroy(err)</span>
+<span class="fstat-no" title="function not covered" >  function onerror(err) {</span>
+<span class="cstat-no" title="statement not covered" >    stream.destroy(err)</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function onmessage(event) {</span>
-<span class="cstat-no" title="statement not covered">    var data = event.data</span>
-<span class="cstat-no" title="statement not covered">    if (data instanceof ArrayBuffer) <span class="cstat-no" title="statement not covered">data = Buffer.from(new Uint8Array(data))</span></span>
-    else <span class="cstat-no" title="statement not covered">data = Buffer.from(data, 'utf8')</span>
-<span class="cstat-no" title="statement not covered">    proxy.push(data)</span>
+<span class="fstat-no" title="function not covered" >  function onmessage(event) {</span>
+<span class="cstat-no" title="statement not covered" >    var data = event.data</span>
+<span class="cstat-no" title="statement not covered" >    if (data instanceof ArrayBuffer) <span class="cstat-no" title="statement not covered" >data = Buffer.from(new Uint8Array(data))</span></span>
+    else <span class="cstat-no" title="statement not covered" >data = Buffer.from(data, 'utf8')</span>
+<span class="cstat-no" title="statement not covered" >    proxy.push(data)</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function destroy() {</span>
-<span class="cstat-no" title="statement not covered">    socket.close()</span>
+<span class="fstat-no" title="function not covered" >  function destroy() {</span>
+<span class="cstat-no" title="statement not covered" >    socket.close()</span>
   }
 &nbsp;
   // this is to be enabled only if objectMode is false
-<span class="fstat-no" title="function not covered">  function writev (chunks, cb) {</span>
-<span class="cstat-no" title="statement not covered">    var buffers = new Array(chunks.length)</span>
-<span class="cstat-no" title="statement not covered">    for (var i = 0; i &lt; chunks.length; i++) {</span>
-<span class="cstat-no" title="statement not covered">      if (typeof chunks[i].chunk === 'string') {</span>
-<span class="cstat-no" title="statement not covered">        buffers[i] = Buffer.from(chunks[i], 'utf8')</span>
+<span class="fstat-no" title="function not covered" >  function writev (chunks, cb) {</span>
+<span class="cstat-no" title="statement not covered" >    var buffers = new Array(chunks.length)</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; chunks.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >      if (typeof chunks[i].chunk === 'string') {</span>
+<span class="cstat-no" title="statement not covered" >        buffers[i] = Buffer.from(chunks[i], 'utf8')</span>
       } else {
-<span class="cstat-no" title="statement not covered">        buffers[i] = chunks[i].chunk</span>
+<span class="cstat-no" title="statement not covered" >        buffers[i] = chunks[i].chunk</span>
       }
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    this._write(Buffer.concat(buffers), 'binary', cb)</span>
+<span class="cstat-no" title="statement not covered" >    this._write(Buffer.concat(buffers), 'binary', cb)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return stream</span>
+<span class="cstat-no" title="statement not covered" >  return stream</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 18:51:41 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 18 2017 22:03:34 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
