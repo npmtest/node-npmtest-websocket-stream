@@ -1,6 +1,6 @@
 # npmtest-websocket-stream
 
-#### test coverage for  [websocket-stream (v4.0.0)](https://github.com/maxogden/websocket-stream#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-websocket-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-websocket-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-websocket-stream.svg)](https://travis-ci.org/npmtest/node-npmtest-websocket-stream)
+#### basic test coverage for  [websocket-stream (v4.0.0)](https://github.com/maxogden/websocket-stream#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-websocket-stream.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-websocket-stream) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-websocket-stream.svg)](https://travis-ci.org/npmtest/node-npmtest-websocket-stream)
 
 #### Use websockets with the node streams API. Works in browser and node
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-websocket-stream/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-websocket-stream/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-websocket-stream/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-websocket-stream/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-websocket-stream/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-websocket-stream/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-websocket-stream/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-websocket-stream/build/coverage.html/index.html)
 
@@ -102,7 +102,8 @@
         "start": "beefy test-client.js",
         "test": "node test.js"
     },
-    "version": "4.0.0"
+    "version": "4.0.0",
+    "bin": {}
 }
 ```
 
